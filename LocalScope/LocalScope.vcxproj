@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{744D5C13-FB86-4632-8CB0-D4788D0643F6}</ProjectGuid>
+    <ProjectGuid>{3413726E-5663-4E4F-ABA8-AB85CF7265F0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>ParametersArguments</RootNamespace>
+    <RootNamespace>LocalScope</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -149,8 +149,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ParametersArguments.cpp" />
-    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="LocalScope.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

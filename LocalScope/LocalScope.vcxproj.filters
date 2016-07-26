@@ -29,10 +29,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ParametersArguments.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Functions.cpp">
+    <ClCompile Include="LocalScope.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
