@@ -3,15 +3,17 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include "functions.h"
 
 using namespace std;
 
-// Function declarations
+/* Function declarations
 void doPrint();
 void printValue(int x);
 int add(int x, int y);
 int multiply(int x, int y);
 int doubleNumber(int x);
+*/
 
 int main()
 {
