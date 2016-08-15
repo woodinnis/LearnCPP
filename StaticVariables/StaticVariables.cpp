@@ -18,9 +18,10 @@ void incrementAndPrint() {
 
 int main()
 {
+
 	incrementAndPrint();
 	incrementAndPrint();
-	incrementAndPrint();
+	incrementAndPrint(6);
 
     return 0;
 }
