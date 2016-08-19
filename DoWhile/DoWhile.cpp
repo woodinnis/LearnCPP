@@ -27,4 +27,3 @@ int main()
 	cout << "You selected option #" << selection << "\n";
 	return 0;
 }
-
