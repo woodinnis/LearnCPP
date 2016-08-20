@@ -24,15 +24,12 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="constants.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Quiz_02.cpp">
+    <ClCompile Include="Quiz_5-02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

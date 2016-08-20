@@ -41,6 +41,9 @@ int main()
 	double height;
 	height = getInitialHeight();
 
+	for (int count = 0;count < height;++count) {
+		calculateAndPrintHeight(height, count);
+	}
 	
     return 0;
 }
