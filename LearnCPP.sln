@@ -93,6 +93,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayLoopQuiz", "ArrayLoopQ
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Array_SelectionSort", "Array_SelectionSort\Array_SelectionSort.vcxproj", "{F4B9C4AE-677A-4DDC-B555-DCD8B5477B0C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SelectionSortQuiz", "SelectionSortQuiz\SelectionSortQuiz.vcxproj", "{A0365078-35FB-406F-944C-478A203D5598}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -413,6 +415,14 @@ Global
 		{F4B9C4AE-677A-4DDC-B555-DCD8B5477B0C}.Release|x64.Build.0 = Release|x64
 		{F4B9C4AE-677A-4DDC-B555-DCD8B5477B0C}.Release|x86.ActiveCfg = Release|Win32
 		{F4B9C4AE-677A-4DDC-B555-DCD8B5477B0C}.Release|x86.Build.0 = Release|Win32
+		{A0365078-35FB-406F-944C-478A203D5598}.Debug|x64.ActiveCfg = Debug|x64
+		{A0365078-35FB-406F-944C-478A203D5598}.Debug|x64.Build.0 = Debug|x64
+		{A0365078-35FB-406F-944C-478A203D5598}.Debug|x86.ActiveCfg = Debug|Win32
+		{A0365078-35FB-406F-944C-478A203D5598}.Debug|x86.Build.0 = Debug|Win32
+		{A0365078-35FB-406F-944C-478A203D5598}.Release|x64.ActiveCfg = Release|x64
+		{A0365078-35FB-406F-944C-478A203D5598}.Release|x64.Build.0 = Release|x64
+		{A0365078-35FB-406F-944C-478A203D5598}.Release|x86.ActiveCfg = Release|Win32
+		{A0365078-35FB-406F-944C-478A203D5598}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -457,5 +467,6 @@ Global
 		{3E40257B-26B4-4A4F-9718-F6AF39970C22} = {E7A7E0BC-AEEE-4984-9BB2-58BB698B4DCA}
 		{EC058155-BBBA-46AC-A164-B4EC5B6C02F2} = {E7A7E0BC-AEEE-4984-9BB2-58BB698B4DCA}
 		{F4B9C4AE-677A-4DDC-B555-DCD8B5477B0C} = {E7A7E0BC-AEEE-4984-9BB2-58BB698B4DCA}
+		{A0365078-35FB-406F-944C-478A203D5598} = {E7A7E0BC-AEEE-4984-9BB2-58BB698B4DCA}
 	EndGlobalSection
 EndGlobal
