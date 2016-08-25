@@ -25,18 +25,14 @@ int main()
 {
 	int var = 0;
 
-	potato Potato;
+	int fibonacci[] = { 0,1,1,2,3,5,8,13,21 };
 
-	Potato.colour = "Gold";
-
-	cout << "A number " << var << '\n';
-	referenceMe(var);
-	cout << "Tweeked: " << var << '\n';
-
-	cout << "A nice " << Potato.colour << " potato.\n";
-	structRef(Potato);
-	cout << "Has just turned " << Potato.colour << '\n';
-    return 0;
+	for (int number : fibonacci) {
+		cout << "Look at me ";
+		if (number % 2 == 0)
+			cout << "I'm even!";
+		cout << '\n';
+	}
 
 }
 
