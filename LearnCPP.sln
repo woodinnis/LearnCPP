@@ -85,15 +85,17 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quiz_5-02", "Quiz_5-02\Quiz
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Section 06", "Section 06", "{E7A7E0BC-AEEE-4984-9BB2-58BB698B4DCA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcxproj", "{58078B0B-0D00-4FD6-9436-4C5AA44B4CF2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_2Arrays", "Arrays\Arrays.vcxproj", "{58078B0B-0D00-4FD6-9436-4C5AA44B4CF2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayQuiz", "ArrayQuiz\ArrayQuiz.vcxproj", "{3E40257B-26B4-4A4F-9718-F6AF39970C22}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_2ArrayQuiz", "ArrayQuiz\ArrayQuiz.vcxproj", "{3E40257B-26B4-4A4F-9718-F6AF39970C22}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayLoopQuiz", "ArrayLoopQuiz\ArrayLoopQuiz.vcxproj", "{EC058155-BBBA-46AC-A164-B4EC5B6C02F2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_3ArrayLoopQuiz", "ArrayLoopQuiz\ArrayLoopQuiz.vcxproj", "{EC058155-BBBA-46AC-A164-B4EC5B6C02F2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Array_SelectionSort", "Array_SelectionSort\Array_SelectionSort.vcxproj", "{F4B9C4AE-677A-4DDC-B555-DCD8B5477B0C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_4Array_SelectionSort", "Array_SelectionSort\Array_SelectionSort.vcxproj", "{F4B9C4AE-677A-4DDC-B555-DCD8B5477B0C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SelectionSortQuiz", "SelectionSortQuiz\SelectionSortQuiz.vcxproj", "{A0365078-35FB-406F-944C-478A203D5598}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_4SelectionSortQuiz", "SelectionSortQuiz\SelectionSortQuiz.vcxproj", "{A0365078-35FB-406F-944C-478A203D5598}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_9Pointers", "6_9Pointers\6_9Pointers.vcxproj", "{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -423,6 +425,14 @@ Global
 		{A0365078-35FB-406F-944C-478A203D5598}.Release|x64.Build.0 = Release|x64
 		{A0365078-35FB-406F-944C-478A203D5598}.Release|x86.ActiveCfg = Release|Win32
 		{A0365078-35FB-406F-944C-478A203D5598}.Release|x86.Build.0 = Release|Win32
+		{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5}.Debug|x64.ActiveCfg = Debug|x64
+		{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5}.Debug|x64.Build.0 = Debug|x64
+		{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5}.Debug|x86.ActiveCfg = Debug|Win32
+		{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5}.Debug|x86.Build.0 = Debug|Win32
+		{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5}.Release|x64.ActiveCfg = Release|x64
+		{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5}.Release|x64.Build.0 = Release|x64
+		{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5}.Release|x86.ActiveCfg = Release|Win32
+		{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -468,5 +478,6 @@ Global
 		{EC058155-BBBA-46AC-A164-B4EC5B6C02F2} = {E7A7E0BC-AEEE-4984-9BB2-58BB698B4DCA}
 		{F4B9C4AE-677A-4DDC-B555-DCD8B5477B0C} = {E7A7E0BC-AEEE-4984-9BB2-58BB698B4DCA}
 		{A0365078-35FB-406F-944C-478A203D5598} = {E7A7E0BC-AEEE-4984-9BB2-58BB698B4DCA}
+		{3DDA4D74-1FB5-49C2-8D3C-69038BCA24F5} = {E7A7E0BC-AEEE-4984-9BB2-58BB698B4DCA}
 	EndGlobalSection
 EndGlobal
