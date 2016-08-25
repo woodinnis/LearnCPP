@@ -16,6 +16,47 @@ int getRandomNumber(int min, int max)
 	return static_cast<int>(rand() * fraction * (max - min + 1) + min);
 }
 
+// My solution
+void sortArray(string *array, int numNames) {
+	// Sort the array
+
+	for (int startIndex = 0; startIndex < numNames; ++startIndex) {
+
+		int maxNames = startIndex;
+
+		for (int innerCount = startIndex + 1; innerCount < numNames; ++innerCount) {
+			if (array[innerCount] < array[maxNames])
+				maxNames = innerCount;
+		}
+
+		swap(array[startIndex], array[maxNames]);
+	}
+}
+
+/* Tutorial solution
+void sortArray(std::string *array, int length)
+{
+	// Step through each element of the array
+	for (int startIndex = 0; startIndex < length; ++startIndex)
+	{
+		// smallestIndex is the index of the smallest element we've encountered so far.
+		int smallestIndex = startIndex;
+
+		// Look for smallest element remaining in the array (starting at startIndex+1)
+		for (int currentIndex = startIndex + 1; currentIndex < length; ++currentIndex)
+		{
+			// If the current element is smaller than our previously found smallest
+			if (array[currentIndex] < array[smallestIndex])
+				// This is the new smallest number for this iteration
+				smallestIndex = currentIndex;
+		}
+
+		// Swap our start element with our smallest element
+		std::swap(array[startIndex], array[smallestIndex]);
+	}
+}
+*/
+
 int main()
 {
 	/*
@@ -80,6 +121,12 @@ int main()
 		}
 
 		// Sort the array
+		sortArray(array, numNames);
+
+		// Print the array
+		for (int count = 0; count < numNames; ++count) {
+			cout << "Student " << count + 1 << ": " << array[count] << '\n';
+		}
 	}
 	return 0;
 }
