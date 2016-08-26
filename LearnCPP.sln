@@ -103,6 +103,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_12ForEachQuiz", "6_12ForE
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Potato", "Potato\Potato.vcxproj", "{62853C7E-5FAA-42E1-AF54-C063A2828918}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E9513A1E-064D-4B3A-9063-D9F83B3BBDA2}"
+	ProjectSection(SolutionItems) = preProject
+		Sandbox\utilities.h = Sandbox\utilities.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
