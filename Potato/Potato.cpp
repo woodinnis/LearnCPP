@@ -19,21 +19,6 @@ struct potato {
 	string texture;
 };
 
-void referenceMe(int &ref) {
-	ref++;
-}
-
-void structRef(potato &ref) {
-	ref.fleshColour = "green";
-}
-
-void showArray(array<int, 10> thisArray) {
-	for (const auto &element : thisArray)
-		cout << element << " ";
-
-	cout << '\n';
-}
-
 void showVector(vector<potato> myVector) {
 	for (const auto &element : myVector) {
 		cout << "The potato is named " << element.name << '\n';
@@ -46,14 +31,9 @@ void showVector(vector<potato> myVector) {
 	}
 }
 
-void showVector(vector<int> myVector) {
-	for (int count = 0; count < myVector.size(); ++count)
-		cout << myVector[count] << '\n';
-}
-
 void newPotato(vector<potato> &potatoVector) {
 	// Add a new potato to the vector list of potatos
-	
+
 	// Prompt the user for details about their potato
 
 	// Name
@@ -86,7 +66,7 @@ void newPotato(vector<potato> &potatoVector) {
 	string texture;
 	cin >> texture;
 
-	
+
 	// Resize potatoVector
 	potatoVector.resize(potatoVector.size() + 1);
 
@@ -104,14 +84,14 @@ void newPotato(vector<potato> &potatoVector) {
 	ref.peelColour = peel;
 	ref.texture = texture;
 
-		/*
-		potatoVector[pVectorIndex].name = name;
-		potatoVector[pVectorIndex].circ = circ;
-		potatoVector[pVectorIndex].weight = weight;
-		potatoVector[pVectorIndex].fleshColour = flesh;
-		potatoVector[pVectorIndex].peelColour = peel;
-		potatoVector[pVectorIndex].texture = texture;
-		*/
+	/*
+	potatoVector[pVectorIndex].name = name;
+	potatoVector[pVectorIndex].circ = circ;
+	potatoVector[pVectorIndex].weight = weight;
+	potatoVector[pVectorIndex].fleshColour = flesh;
+	potatoVector[pVectorIndex].peelColour = peel;
+	potatoVector[pVectorIndex].texture = texture;
+	*/
 	//}
 }
 
@@ -122,13 +102,13 @@ int main()
 	bool createPotato = true;
 
 	while (createPotato) {
-		
+
 		char temp;
 		do {
 			cout << "Would you like to create a potato? [y/n]";
 			cin >> temp;
 		} while (temp != 'y' && temp != 'Y' && temp != 'n' && temp != 'N');
-		
+
 		if (temp == 'y' || temp == 'Y')
 			newPotato(myArray);
 		else

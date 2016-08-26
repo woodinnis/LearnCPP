@@ -99,7 +99,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_9Pointers", "6_9Pointers\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{2AFC318E-E2A4-4CBA-8D67-B7D306AA569B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_12ForEchQuiz", "6_12ForEchQuiz\6_12ForEchQuiz.vcxproj", "{3ED1F5AA-B85D-489D-B9EB-BB9BA39E39B3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6_12ForEachQuiz", "6_12ForEchQuiz\6_12ForEchQuiz.vcxproj", "{3ED1F5AA-B85D-489D-B9EB-BB9BA39E39B3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Potato", "Potato\Potato.vcxproj", "{62853C7E-5FAA-42E1-AF54-C063A2828918}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -453,6 +455,14 @@ Global
 		{3ED1F5AA-B85D-489D-B9EB-BB9BA39E39B3}.Release|x64.Build.0 = Release|x64
 		{3ED1F5AA-B85D-489D-B9EB-BB9BA39E39B3}.Release|x86.ActiveCfg = Release|Win32
 		{3ED1F5AA-B85D-489D-B9EB-BB9BA39E39B3}.Release|x86.Build.0 = Release|Win32
+		{62853C7E-5FAA-42E1-AF54-C063A2828918}.Debug|x64.ActiveCfg = Debug|x64
+		{62853C7E-5FAA-42E1-AF54-C063A2828918}.Debug|x64.Build.0 = Debug|x64
+		{62853C7E-5FAA-42E1-AF54-C063A2828918}.Debug|x86.ActiveCfg = Debug|Win32
+		{62853C7E-5FAA-42E1-AF54-C063A2828918}.Debug|x86.Build.0 = Debug|Win32
+		{62853C7E-5FAA-42E1-AF54-C063A2828918}.Release|x64.ActiveCfg = Release|x64
+		{62853C7E-5FAA-42E1-AF54-C063A2828918}.Release|x64.Build.0 = Release|x64
+		{62853C7E-5FAA-42E1-AF54-C063A2828918}.Release|x86.ActiveCfg = Release|Win32
+		{62853C7E-5FAA-42E1-AF54-C063A2828918}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
