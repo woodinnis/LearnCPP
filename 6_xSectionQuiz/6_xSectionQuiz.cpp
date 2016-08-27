@@ -7,6 +7,8 @@
 #include <array>
 #include <algorithm>
 #include <vector>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -18,9 +20,39 @@ enum ITEMS{
 	TOTAL_ITEMS
 };
 
+enum CARDS {
+	CARD_ACE,
+	CARD_TWO,
+	CARD_THREE,
+	CARD_FOUR,
+	CARD_FIVE,
+	CARD_SIX,
+	CARD_SEVEN,
+	CARD_EIGHT,
+	CARD_NINE,
+	CARD_TEN,
+	CARD_JACK,
+	CARD_QUEEN,
+	CARD_KING,
+	CARD_MAX
+};
+
+enum SUITS {
+	SUIT_HEARTS,
+	SUIT_DIAMONDS,
+	SUIT_SPADES,
+	SUIT_CLUBS,
+	SUITS_MAX
+};
+
 struct Student {
 	string STUDENT_NAME;
 	int STUDENT_GRADE;
+};
+
+struct Card {
+	CARDS CARD_VALUE;
+	SUITS CARD_SUIT;
 };
 
 int countTotalItems(int inventory[]) {
@@ -58,7 +90,7 @@ void showStudents(vector<Student> students) {
 
 void sortStudents(vector<Student> &students) {
 	// Sort students by grade
-	int size = students.size();
+	int size = static_cast<int>(students.size());
 
 	for (int startIndex = 0; startIndex < size; ++startIndex) {
 		int smallIndex = startIndex;
@@ -88,7 +120,121 @@ void printCString(char cChar[], int indexCount) {
 	}
 }
 
+void printCard(const Card &card) {
+	
+	// Print the card value
+	switch (card.CARD_VALUE) {
+		case CARD_ACE:
+			cout << "A";
+			break;
+		case CARD_TWO:
+			cout << "2";
+			break;
+		case CARD_THREE:
+			cout << "3";
+			break;
+		case CARD_FOUR:
+			cout << "4";
+			break;
+		case CARD_FIVE:
+			cout << "5";
+			break;
+		case CARD_SIX:
+			cout << "6";
+			break;
+		case CARD_SEVEN:
+			cout << "7";
+			break;
+		case CARD_EIGHT:
+			cout << "8";
+			break;
+		case CARD_NINE:
+			cout << "9";
+			break;
+		case CARD_TEN:
+			cout << "10";
+			break;
+		case CARD_JACK:
+			cout << "J";
+			break;
+		case CARD_QUEEN:
+			cout << "Q";
+			break;
+		case CARD_KING:
+			cout << "K";
+			break;
+		default:
+			break;
+	}
 
+	// Print the card suit
+	switch (card.CARD_SUIT) {
+		case SUIT_HEARTS:
+			cout << "H";
+			break;
+		case SUIT_DIAMONDS:
+			cout << "D";
+			break;
+		case SUIT_CLUBS:
+			cout << "C";
+			break;
+		case SUIT_SPADES:
+			cout << "S";
+			break;
+		default:
+			break;
+	}
+
+	cout << '\n';
+}
+
+void printDeck(const array<Card,52> &card) {
+
+	for (const auto &element : card) {
+		printCard(element);
+	}
+}
+
+void swapCard(Card &card1, Card &card2) {
+	Card temp;
+	temp = card1;
+	card1 = card2;
+	card2 = temp;
+}
+
+void shuffleDeck(array<Card,52> &deck) {
+	
+	// Seed the RNG
+	srand(static_cast<unsigned int>(time(0)));
+	static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0);
+	
+	// Randomly choose a number of times to shuffle the deck
+	int shuffleNum = static_cast<int>(rand() * fraction * (50 - 25 + 1) + 25);
+
+	// Shuffle the deck
+	int shuffleCount = 0;
+	do {
+
+		// Choose a random card
+		int card1 = static_cast<int>(rand() * fraction * 52);
+		int card2;
+		
+		// Choose a different random card
+		do
+			card2 = static_cast<int>(rand() * fraction * 52);
+		while (card2 == card1);
+
+		// Swap the cards
+		swapCard(deck[card1], deck[card2]);
+
+		++shuffleCount;
+	} while (shuffleCount < shuffleNum);
+}
+
+int getCardValue(const Card card) {
+	// Return the value of the card submitted.
+	return 0;
+}
 int main()
 {
 	/*Q1 :{
@@ -156,6 +302,21 @@ int main()
 		
 	}*/
 
+	// Question 6: Create a card game
+
+	array<Card, 52> card;
+
+	int index{ 0 };
+	for (int suitIndex = 0; suitIndex < SUITS_MAX; ++suitIndex) {
+		for (int cardIndex = 0; cardIndex < CARD_MAX; ++cardIndex) {
+			card[index].CARD_SUIT = static_cast<SUITS> (suitIndex);
+			card[index].CARD_VALUE = static_cast<CARDS> (cardIndex);
+			index++;
+		}
+	}
+	
+	shuffleDeck(card);
+	printDeck(card);
 
     return 0;
 }
