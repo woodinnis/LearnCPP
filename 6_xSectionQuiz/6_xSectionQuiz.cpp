@@ -120,10 +120,10 @@ void printCString(char cChar[], int indexCount) {
 	}
 }
 
-void printCard(const Card &card) {
+void printCard(const Card *card) {
 	
 	// Print the card value
-	switch (card.CARD_VALUE) {
+	switch (card->CARD_VALUE) {
 		case CARD_ACE:
 			cout << "A";
 			break;
@@ -168,7 +168,7 @@ void printCard(const Card &card) {
 	}
 
 	// Print the card suit
-	switch (card.CARD_SUIT) {
+	switch (card->CARD_SUIT) {
 		case SUIT_HEARTS:
 			cout << "H";
 			break;
@@ -191,7 +191,7 @@ void printCard(const Card &card) {
 void printDeck(const array<Card,52> &card) {
 
 	for (const auto &element : card) {
-		printCard(element);
+		//printCard(element);
 	}
 }
 
@@ -231,10 +231,10 @@ void shuffleDeck(array<Card,52> &deck) {
 	} while (shuffleCount < shuffleNum);
 }
 
-int getCardValue(const Card card) {
+int getCardValue(const Card *card) {
 
 	// Return the value of the card submitted.
-	switch (card.CARD_VALUE) {
+	switch (card->CARD_VALUE) {
 		case CARD_TWO:		return 2;
 		case CARD_THREE:	return 3;
 		case CARD_FOUR:		return 4;
@@ -254,9 +254,51 @@ int getCardValue(const Card card) {
 }
 
 bool playBlackjack(array<Card, 52> &Deck) {
-	Card *cardPtr;
+	// Create and initialize a pointer to the first card in the deck
+	Card *cardPtr = &Deck[0];
+	
+	// Create variables for player and dealer score
 	int playerTotal{ 0 };
 	int dealerTotal{ 0 };
+	
+	bool playerStand{ false };
+	do {
+		// Show player/dealer totals
+		cout << "Player has " << playerTotal << '\n';
+		cout << "Dealer has " << dealerTotal << '\n';
+		
+		// Ask the player if they want a card
+		char cHit{};
+		if (!playerStand) {
+			cout << "Hit or stand (H to hit, S to stand)";
+			cin >> cHit;
+		}
+		
+		// If the player hits
+		if (cHit == 'h' || cHit == 'H' && !playerStand) {
+			// Deal a card to the player
+			playerTotal += getCardValue(cardPtr++);
+			// Deal a card to the Dealer
+			if(dealerTotal <= 17)
+				dealerTotal += getCardValue(cardPtr++);
+		}
+		// If the player stands
+		else {
+			// Deal a card to the Dealer until they reach 17
+			playerStand = true;
+			if (dealerTotal <= 17)
+				dealerTotal += getCardValue(cardPtr++);
+		}
+
+	}while(playerTotal <= 21 && dealerTotal <= 17);
+
+	// If player goes over 21, they bust
+	if (playerTotal > 21) {
+		cout << "You've got " << playerTotal << " you bust!\n";
+	}
+
+	return true;
+	
 }
 
 int main()
@@ -338,10 +380,12 @@ int main()
 		}
 	}
 	
-	shuffleDeck(card);
+	shuffleDeck(card);		// Shuffle the cards
+	playBlackjack(card);	// Play a game of blackjack
+
 	//printDeck(card);
-	
-	cout << getCardValue(card[25]);
+	//cout << getCardValue(card[25]);
+
     return 0;
 }
 
