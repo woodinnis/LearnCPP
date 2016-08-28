@@ -232,9 +232,33 @@ void shuffleDeck(array<Card,52> &deck) {
 }
 
 int getCardValue(const Card card) {
+
 	// Return the value of the card submitted.
+	switch (card.CARD_VALUE) {
+		case CARD_TWO:		return 2;
+		case CARD_THREE:	return 3;
+		case CARD_FOUR:		return 4;
+		case CARD_FIVE:		return 5;
+		case CARD_SIX:		return 6;
+		case CARD_SEVEN:	return 7;
+		case CARD_EIGHT:	return 8;
+		case CARD_NINE:		return 9;
+		case CARD_TEN:		return 10;
+		case CARD_JACK:		return 10;
+		case CARD_QUEEN:	return 10;
+		case CARD_KING:		return 10;
+		case CARD_ACE:		return 11;
+	}
+
 	return 0;
 }
+
+bool playBlackjack(array<Card, 52> &Deck) {
+	Card *cardPtr;
+	int playerTotal{ 0 };
+	int dealerTotal{ 0 };
+}
+
 int main()
 {
 	/*Q1 :{
@@ -302,8 +326,7 @@ int main()
 		
 	}*/
 
-	// Question 6: Create a card game
-
+	// Question 6: Create a card shuffler
 	array<Card, 52> card;
 
 	int index{ 0 };
@@ -316,8 +339,9 @@ int main()
 	}
 	
 	shuffleDeck(card);
-	printDeck(card);
-
+	//printDeck(card);
+	
+	cout << getCardValue(card[25]);
     return 0;
 }
 
