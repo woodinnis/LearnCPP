@@ -120,6 +120,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_13CommandLineArguments", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_xSectionQuiz", "7_xSectionQuiz\7_xSectionQuiz.vcxproj", "{6F2A7576-01BB-438C-B8DC-9577B994C361}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Section 08", "Section 08", "{A0D7617C-F7D3-476C-82B7-1E39B6B4071A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8_1PublicPrivateAccessSpecifiers", "8_1PublicPrivateAccessSpecifiers\8_1PublicPrivateAccessSpecifiers.vcxproj", "{95867A25-FE34-46CB-8D50-80BD80E3C4A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -520,6 +524,14 @@ Global
 		{6F2A7576-01BB-438C-B8DC-9577B994C361}.Release|x64.Build.0 = Release|x64
 		{6F2A7576-01BB-438C-B8DC-9577B994C361}.Release|x86.ActiveCfg = Release|Win32
 		{6F2A7576-01BB-438C-B8DC-9577B994C361}.Release|x86.Build.0 = Release|Win32
+		{95867A25-FE34-46CB-8D50-80BD80E3C4A5}.Debug|x64.ActiveCfg = Debug|x64
+		{95867A25-FE34-46CB-8D50-80BD80E3C4A5}.Debug|x64.Build.0 = Debug|x64
+		{95867A25-FE34-46CB-8D50-80BD80E3C4A5}.Debug|x86.ActiveCfg = Debug|Win32
+		{95867A25-FE34-46CB-8D50-80BD80E3C4A5}.Debug|x86.Build.0 = Debug|Win32
+		{95867A25-FE34-46CB-8D50-80BD80E3C4A5}.Release|x64.ActiveCfg = Release|x64
+		{95867A25-FE34-46CB-8D50-80BD80E3C4A5}.Release|x64.Build.0 = Release|x64
+		{95867A25-FE34-46CB-8D50-80BD80E3C4A5}.Release|x86.ActiveCfg = Release|Win32
+		{95867A25-FE34-46CB-8D50-80BD80E3C4A5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -572,5 +584,6 @@ Global
 		{54E68066-FEC2-4A43-8FF3-83643A84FD2B} = {30374448-7A4A-4B80-92E4-9BD1D847B9C6}
 		{AC425925-27CE-4F7D-BFC5-CDA67CB4A22B} = {30374448-7A4A-4B80-92E4-9BD1D847B9C6}
 		{6F2A7576-01BB-438C-B8DC-9577B994C361} = {30374448-7A4A-4B80-92E4-9BD1D847B9C6}
+		{95867A25-FE34-46CB-8D50-80BD80E3C4A5} = {A0D7617C-F7D3-476C-82B7-1E39B6B4071A}
 	EndGlobalSection
 EndGlobal
