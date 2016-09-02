@@ -27,10 +27,43 @@ void swap(int &x, int &y) {
 
 //	3) Binary search
 //	3a) Write an iterative version of the binarySearch function.
+/*
+int binarySearch(int *array, int target, int min, int max)
+{	
+	// Scan for target value
+	while (min <= max) {
+		int index = (max + min) / 2;
+
+		if (array[index] > target) {
+			max = index - 1;
+		}
+		else if (array[index] < target) {
+			min = index + 1;
+		}
+		else
+			return index;
+	}
+
+	return -1;
+}
+*/
+
+//	3b) Write a recursive version of the binarySearch function.
 int binarySearch(int *array, int target, int min, int max)
 {
-	int index{ 0 };
-	return index;
+	// Scan for target value
+
+	if(min > max)
+		return -1;
+
+	int index = (max + min) / 2;
+	
+	if (array[index] > target)
+		return binarySearch(array, target, min, index - 1);
+	else if (array[index] < target)
+		return binarySearch(array, target, index + 1, max);
+	else
+		return index;
 }
 
 int main()
@@ -58,4 +91,3 @@ int main()
 
 	return 0;
 }
-
