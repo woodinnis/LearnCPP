@@ -19,6 +19,10 @@ private:
 	uint8_t m_alpha;
 
 public:
+	//	Tutorial solution
+	//RGBA(std::uint8_t red = 0, std::uint8_t green = 0, std::uint8_t blue = 0, std::uint8_t alpha = 255) :
+	//	m_red(red), m_green(green), m_blue(blue), m_alpha(alpha)
+
 	//	Default constructor
 	RGBA() : m_red{ 0 }, m_green{ 0 }, m_blue{ 0 }, m_alpha{ 255 }
 	{}
@@ -43,6 +47,7 @@ int main()
 	
 	RGBA teal(0, 127, 127);
 	teal.print();
+	
 
     return 0;
 }
