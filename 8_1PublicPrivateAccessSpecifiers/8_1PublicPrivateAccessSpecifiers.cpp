@@ -58,6 +58,51 @@ public:
 	};
 };
 
+// Quiz
+class Ball {
+	string m_color;
+	double m_radius;
+public:
+	
+	/*	1a) Default constructor, only color, only radius, and both.
+	Ball() {
+		m_color = "Black";
+		m_radius = 10.0;
+	}
+	Ball(const string &c = "Black") {
+		m_color = c;
+		m_radius = 10.0;
+	}
+	Ball(double r = 10.0) {
+		m_color = "Black";
+		m_radius = r;
+	}
+	Ball(const string &c = "Black" , double r = 10.0) {
+		m_color = c;
+		m_radius = r;
+	}
+	*/
+
+
+	//	1b) Default parameters
+	// Only radius
+	Ball(double r) {
+		m_color = "Black";
+		m_radius = r;
+	}
+	// Constructor with default parameters
+	Ball(const string &c = "Black", double r = 10.0) {
+		m_color = c;
+		m_radius = r;
+	}
+	
+
+
+	void print() {
+		cout << "Color: " << m_color << ", radius: " << m_radius << '\n';
+	}
+};
+
 int main()
 {
 	Point3d point;
@@ -65,7 +110,7 @@ int main()
 
 	point.setValues(1.0, 2.0, 3.0);
 
-//	point.print();
+/*	point.print();
 
 	stack.reset();
 
@@ -83,6 +128,19 @@ int main()
 	stack.pop();
 
 	stack.print();
+*/
+
+	Ball def;
+	def.print();
+
+	Ball blue("blue");
+	blue.print();
+
+	Ball twenty(20.0);
+	twenty.print();
+
+	Ball blueTwenty("blue", 20.0);
+	blueTwenty.print();
 
     return 0;
 }
