@@ -105,6 +105,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Potato", "Potato\Potato.vcx
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E9513A1E-064D-4B3A-9063-D9F83B3BBDA2}"
 	ProjectSection(SolutionItems) = preProject
+		utilities.cpp = utilities.cpp
 		Sandbox\utilities.h = Sandbox\utilities.h
 	EndProjectSection
 EndProject

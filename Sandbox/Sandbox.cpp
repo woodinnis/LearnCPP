@@ -3,6 +3,10 @@
 
 #include "stdafx.h"
 #include "utilities.h"
+#include "Date.h"
+#include "Potato.h"
+#include "TestHeader.h"
+
 /*
 #include <iostream>
 #include <string>
@@ -12,21 +16,8 @@
 */
 using namespace std;
 
-struct potato {
-	string name;
-	double circ;
-	double weight;
-	string fleshColour;
-	string peelColour;
-	string texture;
-};
-
 void referenceMe(int &ref) {
 	ref++;
-}
-
-void structRef(potato &ref) {
-	ref.fleshColour = "green";
 }
 
 void showArray(array<int, 10> thisArray) {
@@ -34,6 +25,18 @@ void showArray(array<int, 10> thisArray) {
 		cout << element << " ";
 
 	cout << '\n';
+}
+
+/*
+potatoVector[pVectorIndex].name = name;
+potatoVector[pVectorIndex].circ = circ;
+potatoVector[pVectorIndex].weight = weight;
+potatoVector[pVectorIndex].fleshColour = flesh;
+potatoVector[pVectorIndex].peelColour = peel;
+potatoVector[pVectorIndex].texture = texture;
+
+void structRef(potato &ref) {
+ref.fleshColour = "green";
 }
 
 void showVector(vector<potato> myVector) {
@@ -47,80 +50,33 @@ void showVector(vector<potato> myVector) {
 		cout << '\n';
 	}
 }
+// Resize potatoVector
+potatoVector.resize(potatoVector.size() + 1);
+
+// Get new size and create an index for use
+int pVectorIndex = potatoVector.size() - 1;
+
+// Create a reference to the new index
+potato &ref = potatoVector[pVectorIndex];
+
+// Create the new entry
+ref.name = name;
+ref.circ = circ;
+ref.weight = weight;
+ref.fleshColour = flesh;
+ref.peelColour = peel;
+ref.texture = texture;
+
+*/
 
 void showVector(vector<int> myVector) {
 	for (int count = 0; count < myVector.size(); ++count)
 		cout << myVector[count] << '\n';
 }
 
-void newPotato(vector<potato> &potatoVector) {
-	// Add a new potato to the vector list of potatos
-	
-	// Prompt the user for details about their potato
-
-	// Name
-	cout << "Please name your potato: ";
-	string name;
-	cin >> name;
-
-	// Size
-	cout << "How large is your potato? ";
-	double circ;
-	cin >> circ;
-
-	// Weight
-	cout << "How heavy is your potato? ";
-	double weight;
-	cin >> weight;
-
-	// Flesh colour
-	cout << "What colour is the flesh of your potato? ";
-	string flesh;
-	cin >> flesh;
-
-	// Peel colour
-	cout << "What colour is the peel of your potato? ";
-	string peel;
-	cin >> peel;
-
-	// Texture
-	cout << "What is the texture of your potato? ";
-	string texture;
-	cin >> texture;
-
-	
-	// Resize potatoVector
-	potatoVector.resize(potatoVector.size() + 1);
-
-	// Get new size and create an index for use
-	int pVectorIndex = potatoVector.size() - 1;
-
-	// Create a reference to the new index
-	potato &ref = potatoVector[pVectorIndex];
-
-	// Create the new entry
-	ref.name = name;
-	ref.circ = circ;
-	ref.weight = weight;
-	ref.fleshColour = flesh;
-	ref.peelColour = peel;
-	ref.texture = texture;
-
-		/*
-		potatoVector[pVectorIndex].name = name;
-		potatoVector[pVectorIndex].circ = circ;
-		potatoVector[pVectorIndex].weight = weight;
-		potatoVector[pVectorIndex].fleshColour = flesh;
-		potatoVector[pVectorIndex].peelColour = peel;
-		potatoVector[pVectorIndex].texture = texture;
-		*/
-	//}
-}
-
 int main()
 {
-	vector<potato> myArray;
-
+/*
 	bool createPotato = true;
 
 	while (createPotato) {
@@ -140,5 +96,19 @@ int main()
 	for (const auto &element : myArray) {
 		showVector(myArray);
 	}
+*/
 
+	Potato potato;
+
+	//potato.newPotato();
+
+	Date Birthday(1982,02,15);
+
+	//cout << "My Birthday is: " << Birthday.getDay() << " " << Birthday.getMonth() << " " << Birthday.getYear() << '\n';
+
+	//potato.showPotato();
+
+	// cout << add(52, 100);
+
+	cout << message("potato","fish","oil");
 }
