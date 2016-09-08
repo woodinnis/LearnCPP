@@ -16,6 +16,69 @@
 */
 using namespace std;
 
+class Wanker {
+private:
+	int m_int;
+	double m_double;
+	string m_string;
+
+public:
+	Wanker() {}
+	Wanker(int x = 0 , double y = 0.0, string z = ""):
+		m_int( x ), m_double( y ), m_string( z ) {}
+
+	void showVars() const {
+		cout << "m_int is set to: " << m_int << '\n';
+		cout << "m_double is set to: " << m_double << '\n';
+		cout << "m_string is set to: " << m_string << '\n';
+	}
+};
+
+int main()
+{
+/*
+	bool createPotato = true;
+
+	while (createPotato) {
+		
+		char temp;
+		do {
+			cout << "Would you like to create a potato? [y/n]";
+			cin >> temp;
+		} while (temp != 'y' && temp != 'Y' && temp != 'n' && temp != 'N');
+		
+		if (temp == 'y' || temp == 'Y')
+			newPotato(myArray);
+		else
+			createPotato = false;
+	}
+
+	for (const auto &element : myArray) {
+		showVector(myArray);
+	}
+*/
+
+	Potato potato;
+
+	//potato.newPotato();
+
+	Date Birthday(1982,02,15);
+
+	Wanker fap(0,0.0,"");
+
+	fap.showVars();
+
+	//cout << "My Birthday is: " << Birthday.getDay() << " " << Birthday.getMonth() << " " << Birthday.getYear() << '\n';
+
+	//potato.showPotato();
+
+	// cout << add(52, 100);
+
+	cout << message("potato","fish","oil");
+}
+
+/*	Old sandbox stuff.
+
 void referenceMe(int &ref) {
 	ref++;
 }
@@ -27,7 +90,11 @@ void showArray(array<int, 10> thisArray) {
 	cout << '\n';
 }
 
-/*
+void showVector(vector<int> myVector) {
+	for (int count = 0; count < myVector.size(); ++count)
+		cout << myVector[count] << '\n';
+}
+
 potatoVector[pVectorIndex].name = name;
 potatoVector[pVectorIndex].circ = circ;
 potatoVector[pVectorIndex].weight = weight;
@@ -68,47 +135,3 @@ ref.peelColour = peel;
 ref.texture = texture;
 
 */
-
-void showVector(vector<int> myVector) {
-	for (int count = 0; count < myVector.size(); ++count)
-		cout << myVector[count] << '\n';
-}
-
-int main()
-{
-/*
-	bool createPotato = true;
-
-	while (createPotato) {
-		
-		char temp;
-		do {
-			cout << "Would you like to create a potato? [y/n]";
-			cin >> temp;
-		} while (temp != 'y' && temp != 'Y' && temp != 'n' && temp != 'N');
-		
-		if (temp == 'y' || temp == 'Y')
-			newPotato(myArray);
-		else
-			createPotato = false;
-	}
-
-	for (const auto &element : myArray) {
-		showVector(myArray);
-	}
-*/
-
-	Potato potato;
-
-	//potato.newPotato();
-
-	Date Birthday(1982,02,15);
-
-	//cout << "My Birthday is: " << Birthday.getDay() << " " << Birthday.getMonth() << " " << Birthday.getYear() << '\n';
-
-	//potato.showPotato();
-
-	// cout << add(52, 100);
-
-	cout << message("potato","fish","oil");
-}
