@@ -173,8 +173,8 @@ int main()
 
 	srand(static_cast<unsigned int>(time(0)));
 
-	Monster m = MonsterGenerator::generateMonster();	//skele(Monster::Skeleton, "Bones", "*rattle*", 4);
-	m.print();
+	//Monster m = MonsterGenerator::generateMonster();	//skele(Monster::Skeleton, "Bones", "*rattle*", 4);
+	//m.print();
 
     return 0;
 }
