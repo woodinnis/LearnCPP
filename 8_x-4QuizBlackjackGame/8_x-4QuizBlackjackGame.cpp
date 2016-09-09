@@ -95,6 +95,8 @@ private:
 class Deck {
 public:
 	Deck() {
+		m_cardIndex = 0;
+
 		// We could initialize each card individually, but that would be a pain.  Let's use a loop.
 		int card = 0;
 		for (int suit = 0; suit < Card::MAX_SUITS; ++suit)
@@ -118,6 +120,9 @@ public:
 
 	void shuffleDeck()
 	{
+		// Reset the card index when the deck is shuffled
+		m_cardIndex = 0;
+
 		// Step through each card in the deck
 		for (int index = 0; index < 52; ++index)
 		{
@@ -128,8 +133,13 @@ public:
 		}
 	}
 
+	const Card & dealCard(){
+		return Card(m_deck[m_cardIndex++]);
+	}
+	
 private:
 	array<Card, 52> m_deck;
+	int m_cardIndex;
 
 	int static getRandomNumber(int min, int max)
 	{
@@ -137,7 +147,6 @@ private:
 																					 // evenly distribute the random number across our range
 		return static_cast<int>(rand() * fraction * (max - min + 1) + min);
 	}
-
 	void static swapCard(Card &a, Card &b)
 	{
 		Card temp = a;
@@ -248,6 +257,8 @@ int main()
 	deck.printDeck();
 	deck.shuffleDeck();
 	deck.printDeck();
+	std::cout << "The first card has value: " << deck.dealCard().getCardValue() << '\n';
+	std::cout << "The second card has value: " << deck.dealCard().getCardValue() << '\n';
 
 	return 0;
 }
