@@ -135,7 +135,15 @@ class MonsterGenerator {
 private:
 public:
 	static Monster generateMonster() {
-		return Monster(Monster::Skeleton, "Bones", "*rattle*", 4);
+		
+		static array<string, 6> s_names{ "Bones", "Scales", "Gollum", "Lumpy", "Braineater", "Alucard"};
+		static array<string, 6> s_roars{ "*rattle*", "*ROAR!*","*ARGH!*","*GRRRR!*","*UUUGGGGH*","What is a man? A miserable little pile of secrets! But enough talk! Have at you!" };
+		
+		// The tutorial uses individual variables for MonsterType and hitpoints, while I chose to return all elements as anonymous
+		return Monster(static_cast<Monster::MonsterType>(getRandomNumber(0,Monster::MAX_MONSTER_TYPES - 1)),	// Generate a random type
+			s_names[getRandomNumber(0, s_names.size() - 1)],													// Generate a random name
+			s_roars[getRandomNumber(0, s_roars.size() - 1)],													// Generate a random roar
+			getRandomNumber(1,100));																			// Generate a random HP
 	}
 	
 	// Generate a random number between min and max (inclusive)
@@ -143,7 +151,8 @@ public:
 	static int getRandomNumber(int min, int max)
 	{
 		static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0);  // static used for efficiency, so we only calculate this value once
-																					 // evenly distribute the random number across our range
+																		
+		rand();		// Discard ther first rand() result								 // evenly distribute the random number across our range
 		return static_cast<int>(rand() * fraction * (max - min + 1) + min);
 	}
 };
