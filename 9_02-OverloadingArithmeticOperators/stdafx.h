@@ -9,11 +9,10 @@
 
 #include <stdio.h>
 #include <tchar.h>
+
 #include <iostream>
 #include <string>
-#include <array>
-#include <algorithm>
-#include <vector>
-#include <random>
+
+
 
 // TODO: reference additional headers your program requires here
