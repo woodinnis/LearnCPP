@@ -77,11 +77,14 @@ private:
 	int m_cents;
 
 public:
-	Cents(int cents) { m_cents = cents; }
+	Cents(int cents = 0) { m_cents = cents; }
 
 	// Overloaded operator fuction prototypes
-	friend Cents operator+(const Cents &c1, const Cents &c2);
-	friend Cents operator-(const Cents &c1, const Cents &c2);
+	//friend Cents operator+(const Cents &c1, const Cents &c2);
+	//friend Cents operator-(const Cents &c1, const Cents &c2);
+
+	friend ostream& operator<< (ostream &out, const Cents &cents);
+	friend istream& operator>> (istream &in, Cents &cents);
 
 	int getCents() const { return m_cents; }
 };
@@ -89,13 +92,28 @@ public:
 //	+ Operator overload function
 Cents operator+(const Cents &c1, const Cents &c2)
 {
-	return Cents(c1.m_cents + c2.m_cents);
+	return Cents(c1.getCents() + c2.getCents());
 }
 //	- Operator overload function
 Cents operator-(const Cents &c1, const Cents &c2)
 {
-	return Cents(c1.m_cents - c2.m_cents);
+	return Cents(c1.getCents() - c2.getCents());
 }
+
+ostream & operator<<(ostream &out, const Cents &cents)
+{
+	out << "I have " << cents.getCents() << " cents.\n";
+
+	return out;
+}
+
+istream& operator>> (istream &in, Cents &cents)
+{
+	in >> cents.m_cents;
+
+	return in;
+}
+
 int main()
 {
 /*
@@ -124,15 +142,22 @@ int main()
 
 	//potato.newPotato();
 
-	Date Birthday(1982,02,15);
+//	Date Birthday(1982,02,15);
 
-	Wanker fap(0,0.0,"");
+//	Wanker fap(0,0.0,"");
 
-	Cents c1(10), c2(5);
-	Cents centSum = c1 - c2;
+	Cents c1(10);
+	Cents c2;
+	
+	cout << "Enter a value: ";
+	cin >> c2;
+
+	Cents centSum = c1 + c2;
+
+	cout << centSum;
+
 //	fap.showVars();
 
-//	cout << "I have " << centSum.getCents() << " cents.\n";
 	//cout << "My Birthday is: " << Birthday.getDay() << " " << Birthday.getMonth() << " " << Birthday.getYear() << '\n';
 
 	//potato.showPotato();
