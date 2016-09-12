@@ -7,70 +7,7 @@
 #include "Potato.h"
 #include "TestHeader.h"
 
-/*
-#include <iostream>
-#include <string>
-#include <array>
-#include <algorithm>
-#include <vector>
-*/
 using namespace std;
-
-class Wanker {
-private:
-	int m_int;
-	double m_double;
-	string m_string;
-
-public:
-	Wanker() {}
-	Wanker(int x = 0 , double y = 0.0, string z = ""):
-		m_int( x ), m_double( y ), m_string( z ) {}
-
-	void showVars() const {
-		cout << "m_int is set to: " << m_int << '\n';
-		cout << "m_double is set to: " << m_double << '\n';
-		cout << "m_string is set to: " << m_string << '\n';
-	}
-};
-
-class MinMax {
-private:
-	int m_min;
-	int m_max;
-public:
-	MinMax(int min, int max) {
-		m_min = min;
-		m_max = max;
-	}
-
-	int getMin() { return m_min; }
-	int getMax() { return m_max; }
-
-	friend MinMax operator+(const MinMax &m1, const MinMax &m2);
-	friend MinMax operator+(const MinMax &m, int value);
-	friend MinMax operator+(int value, const MinMax m);
-
-};
-
-MinMax operator+(const MinMax &m1, const MinMax &m2) {
-	int min = m1.m_min < m2.m_min ? m1.m_min : m2.m_min;
-
-	int max = m1.m_max > m2.m_max ? m1.m_max : m2.m_max;
-
-	return MinMax(min, max);
-}
-
-MinMax operator+(const MinMax &m, int value) {
-	int min = m.m_min < value ? m.m_min : value;
-
-	int max = m.m_max > value ? m.m_max : value;
-
-	return MinMax(min, max);
-}
-MinMax operator+(int value, const MinMax m) {
-	return (m + value);
-}
 
 class Cents{
 private:
@@ -80,8 +17,10 @@ public:
 	Cents(int cents = 0) { m_cents = cents; }
 
 	// Overloaded operator fuction prototypes
-	//friend Cents operator+(const Cents &c1, const Cents &c2);
-	//friend Cents operator-(const Cents &c1, const Cents &c2);
+	Cents operator+(int value);
+	friend Cents operator-(const Cents &c1, const Cents &c2);
+
+	Cents operator-() const;
 
 	friend ostream& operator<< (ostream &out, const Cents &cents);
 	friend istream& operator>> (istream &in, Cents &cents);
@@ -90,14 +29,19 @@ public:
 };
 
 //	+ Operator overload function
-Cents operator+(const Cents &c1, const Cents &c2)
+Cents Cents::operator+(int value)
 {
-	return Cents(c1.getCents() + c2.getCents());
+	return Cents(m_cents + value);
 }
 //	- Operator overload function
 Cents operator-(const Cents &c1, const Cents &c2)
 {
 	return Cents(c1.getCents() - c2.getCents());
+}
+
+Cents Cents::operator-() const
+{
+	return Cents(-m_cents);
 }
 
 ostream & operator<<(ostream &out, const Cents &cents)
@@ -140,14 +84,9 @@ int main()
 
 	Potato potato;
 
-	//potato.newPotato();
-
-//	Date Birthday(1982,02,15);
-
-//	Wanker fap(0,0.0,"");
-
 	Cents c1(10);
-	Cents c2;
+	Cents dime(10);
+	int c2;
 	
 	cout << "Enter a value: ";
 	cin >> c2;
@@ -156,20 +95,66 @@ int main()
 
 	cout << centSum;
 
-//	fap.showVars();
-
-	//cout << "My Birthday is: " << Birthday.getDay() << " " << Birthday.getMonth() << " " << Birthday.getYear() << '\n';
-
-	//potato.showPotato();
-
-	// cout << add(52, 100);
-
-	// cout << message("potato","fish","oil");
-
-	
+	cout << "Negative dimes are worth " << (-dime) << '\n';
 }
 
 /*	Old sandbox stuff.
+
+class Wanker {
+private:
+int m_int;
+double m_double;
+string m_string;
+
+public:
+Wanker() {}
+Wanker(int x = 0 , double y = 0.0, string z = ""):
+m_int( x ), m_double( y ), m_string( z ) {}
+
+void showVars() const {
+cout << "m_int is set to: " << m_int << '\n';
+cout << "m_double is set to: " << m_double << '\n';
+cout << "m_string is set to: " << m_string << '\n';
+}
+};
+
+class MinMax {
+private:
+int m_min;
+int m_max;
+public:
+MinMax(int min, int max) {
+m_min = min;
+m_max = max;
+}
+
+int getMin() { return m_min; }
+int getMax() { return m_max; }
+
+friend MinMax operator+(const MinMax &m1, const MinMax &m2);
+friend MinMax operator+(const MinMax &m, int value);
+friend MinMax operator+(int value, const MinMax m);
+
+};
+
+MinMax operator+(const MinMax &m1, const MinMax &m2) {
+int min = m1.m_min < m2.m_min ? m1.m_min : m2.m_min;
+
+int max = m1.m_max > m2.m_max ? m1.m_max : m2.m_max;
+
+return MinMax(min, max);
+}
+
+MinMax operator+(const MinMax &m, int value) {
+int min = m.m_min < value ? m.m_min : value;
+
+int max = m.m_max > value ? m.m_max : value;
+
+return MinMax(min, max);
+}
+MinMax operator+(int value, const MinMax m) {
+return (m + value);
+}
 
 void referenceMe(int &ref) {
 	ref++;
