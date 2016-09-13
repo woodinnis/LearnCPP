@@ -36,6 +36,9 @@
     <ClInclude Include="TestHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Cents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -51,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TestHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cents.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

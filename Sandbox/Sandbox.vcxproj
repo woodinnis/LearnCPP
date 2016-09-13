@@ -146,6 +146,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cents.h" />
     <ClInclude Include="Potato.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -153,6 +154,7 @@
     <ClInclude Include="TestHeader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cents.cpp" />
     <ClCompile Include="Potato.cpp" />
     <ClCompile Include="Sandbox.cpp" />
     <ClCompile Include="stdafx.cpp">
