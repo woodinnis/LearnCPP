@@ -141,6 +141,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_02-OverloadingArithmeticO
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_03-OverloadingIOOperators", "9_03-OverloadingIOOperators\9_03-OverloadingIOOperators.vcxproj", "{9C7B06FC-13FE-4D8B-B503-0616058A7F0A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_05-OverloadingUnaryOperators", "9_05-OverloadingUnaryOperators\9_05-OverloadingUnaryOperators.vcxproj", "{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -605,6 +607,14 @@ Global
 		{9C7B06FC-13FE-4D8B-B503-0616058A7F0A}.Release|x64.Build.0 = Release|x64
 		{9C7B06FC-13FE-4D8B-B503-0616058A7F0A}.Release|x86.ActiveCfg = Release|Win32
 		{9C7B06FC-13FE-4D8B-B503-0616058A7F0A}.Release|x86.Build.0 = Release|Win32
+		{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23}.Debug|x64.ActiveCfg = Debug|x64
+		{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23}.Debug|x64.Build.0 = Debug|x64
+		{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23}.Debug|x86.ActiveCfg = Debug|Win32
+		{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23}.Debug|x86.Build.0 = Debug|Win32
+		{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23}.Release|x64.ActiveCfg = Release|x64
+		{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23}.Release|x64.Build.0 = Release|x64
+		{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23}.Release|x86.ActiveCfg = Release|Win32
+		{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -665,5 +675,6 @@ Global
 		{98BBEE5A-9B78-4B8C-A71B-45CF435021EF} = {A0D7617C-F7D3-476C-82B7-1E39B6B4071A}
 		{A41DE14C-6223-40A0-A30A-79956DCFC936} = {E07DED68-9742-44D4-BA38-64F072303084}
 		{9C7B06FC-13FE-4D8B-B503-0616058A7F0A} = {E07DED68-9742-44D4-BA38-64F072303084}
+		{9DAB71BF-F3DF-4C6B-9ACA-0F83C7C24E23} = {E07DED68-9742-44D4-BA38-64F072303084}
 	EndGlobalSection
 EndGlobal
