@@ -9,95 +9,48 @@
 #include "Cents.h"
 #include <cassert> // for assert()
 
-class IntList
+
+class Matrix
 {
 private:
-	int m_list[10];
-
+	double data[4][4];
 public:
-	int& operator[] (const int index);
-};
-
-int& IntList::operator[] (const int index)
-{
-	assert(index >= 0 && index < 10);
-
-	return m_list[index];
-}
-
-using namespace std;
-
-class Digit
-{
-private:
-	int m_digit;
-public:
-	Digit(int digit = 0)
-		: m_digit(digit)
+	Matrix()
 	{
+		// Set all elements of the matrix to 0.0
+		for (int row = 0; row < 4; ++row)
+			for (int col = 0; col < 4; ++col)
+				data[row][col] = 0.0;
 	}
 
-	Digit& operator++(); // prefix
-	Digit& operator--(); // prefix
+	double& operator()(int row, int col);
+	const double& operator()(int row, int col) const; // for const objects
+	void operator()();
 
-	Digit operator++(int); // postfix
-	Digit operator--(int); // postfix
-
-	friend std::ostream& operator<< (std::ostream &out, const Digit &d);
 };
 
-Digit& Digit::operator++()
+double& Matrix::operator()(int row, int col)
 {
-	// If our number is already at 9, wrap around to 0
-	if (m_digit == 9)
-		m_digit = 0;
-	// otherwise just increment to next number
-	else
-		++m_digit;
+	assert(col >= 0 && col < 4);
+	assert(row >= 0 && row < 4);
 
-	return *this;
+	return data[row][col];
 }
 
-Digit& Digit::operator--()
+const double& Matrix::operator()(int row, int col) const
 {
-	// If our number is already at 0, wrap around to 9
-	if (m_digit == 0)
-		m_digit = 9;
-	// otherwise just decrement to next number
-	else
-		--m_digit;
+	assert(col >= 0 && col < 4);
+	assert(row >= 0 && row < 4);
 
-	return *this;
+	return data[row][col];
 }
 
-Digit Digit::operator++(int)
+void Matrix::operator()()
 {
-	// Create a temporary variable with our current digit
-	Digit temp(m_digit);
-
-	// Use prefix operator to increment this digit
-	++(*this); // apply operator
-
-			   // return temporary result
-	return temp; // return saved state
-}
-
-Digit Digit::operator--(int)
-{
-	// Create a temporary variable with our current digit
-	Digit temp(m_digit);
-
-	// Use prefix operator to decrement this digit
-	--(*this); // apply operator
-
-			   // return temporary result
-	return temp; // return saved state
-}
-
-std::ostream& operator<< (std::ostream &out, const Digit &d)
-{
-	out << d.m_digit;
-	return out;
+	// Reset all elements of the matrix to 0.0
+	for (int row = 0; row < 4; ++row)
+		for (int col = 0; col < 4; ++col)
+			data[row][col] = 0.0;
 }
 
 int main()
@@ -123,18 +76,11 @@ int main()
 	if (nickle <= dime)
 		cout << "a dime is greater than or equal to a nickle.\n";
 
-	Digit digit(c2);
-
-	std::cout << digit;
-	std::cout << ++digit; // calls Digit::operator++();
-	std::cout << digit++; // calls Digit::operator++(int);
-	std::cout << digit;
-	std::cout << --digit; // calls Digit::operator--();
-	std::cout << digit--; // calls Digit::operator--(int);
-	std::cout << digit;
-
-	IntList list;
-
+	Matrix matrix;
+	matrix(1, 2) = 4.5;
+	cout << matrix(1, 2) << '\n';
+	matrix();
+	cout << matrix(1, 2);
 	return 0;
 
 
