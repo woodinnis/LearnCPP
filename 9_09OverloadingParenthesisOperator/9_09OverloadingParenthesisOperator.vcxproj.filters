@@ -29,7 +29,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="9_08-OverloadingSubscriptOperator.cpp">
+    <ClCompile Include="9_09-OverloadingParenthesisOperator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

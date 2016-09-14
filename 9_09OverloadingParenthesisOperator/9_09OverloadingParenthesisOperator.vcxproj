@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{ACEF50C5-25D9-4A1B-B827-E6539A258AFB}</ProjectGuid>
+    <ProjectGuid>{6193C202-C42D-4813-91C9-3DE11B2276DA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My9_08OverloadingSubscriptOperator</RootNamespace>
+    <RootNamespace>My9_09OverloadingParenthesisOperator</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>9_08-OverloadingSubscriptOperator</ProjectName>
+    <ProjectName>9_09-OverloadingParenthesisOperator</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -150,7 +150,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="9_08-OverloadingSubscriptOperator.cpp" />
+    <ClCompile Include="9_09-OverloadingParenthesisOperator.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
