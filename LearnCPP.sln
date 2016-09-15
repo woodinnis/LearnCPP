@@ -147,7 +147,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_06-OverloadingComparisonO
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_08-OverloadingSubscriptOperator", "9_08OverloadingSubscriptOperator\9_08OverloadingSubscriptOperator.vcxproj", "{ACEF50C5-25D9-4A1B-B827-E6539A258AFB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_09OverloadingParenthesisOperator", "9_09OverloadingParenthesisOperator\9_09OverloadingParenthesisOperator.vcxproj", "{6193C202-C42D-4813-91C9-3DE11B2276DA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_09-OverloadingParenthesisOperator", "9_09OverloadingParenthesisOperator\9_09OverloadingParenthesisOperator.vcxproj", "{6193C202-C42D-4813-91C9-3DE11B2276DA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_x-SectionQuiz", "9_x-SectionQuiz\9_x-SectionQuiz.vcxproj", "{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -645,6 +647,14 @@ Global
 		{6193C202-C42D-4813-91C9-3DE11B2276DA}.Release|x64.Build.0 = Release|x64
 		{6193C202-C42D-4813-91C9-3DE11B2276DA}.Release|x86.ActiveCfg = Release|Win32
 		{6193C202-C42D-4813-91C9-3DE11B2276DA}.Release|x86.Build.0 = Release|Win32
+		{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C}.Debug|x64.ActiveCfg = Debug|x64
+		{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C}.Debug|x64.Build.0 = Debug|x64
+		{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C}.Debug|x86.ActiveCfg = Debug|Win32
+		{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C}.Debug|x86.Build.0 = Debug|Win32
+		{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C}.Release|x64.ActiveCfg = Release|x64
+		{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C}.Release|x64.Build.0 = Release|x64
+		{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C}.Release|x86.ActiveCfg = Release|Win32
+		{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -709,5 +719,6 @@ Global
 		{C17D1B26-8CA7-4E62-A550-7FAAC93DC180} = {E07DED68-9742-44D4-BA38-64F072303084}
 		{ACEF50C5-25D9-4A1B-B827-E6539A258AFB} = {E07DED68-9742-44D4-BA38-64F072303084}
 		{6193C202-C42D-4813-91C9-3DE11B2276DA} = {E07DED68-9742-44D4-BA38-64F072303084}
+		{43CAFB05-27FF-487C-9DD4-AF965DBC2B7C} = {E07DED68-9742-44D4-BA38-64F072303084}
 	EndGlobalSection
 EndGlobal
