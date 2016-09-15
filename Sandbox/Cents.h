@@ -30,5 +30,7 @@ public:
 	friend bool operator>= (const Cents &c1, const Cents &c2);
 
 	int getCents() const { return m_cents; }
+
+	operator int() { return m_cents; }
 };
 

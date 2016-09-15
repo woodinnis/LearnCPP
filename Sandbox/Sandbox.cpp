@@ -53,59 +53,76 @@ void Matrix::operator()()
 			data[row][col] = 0.0;
 }
 
+void printInt(int value)
+{
+	cout << value;
+}
+
+
+class Dollars
+{
+private:
+	int m_dollars;
+public:
+	Dollars(int dollars = 0)
+	{
+		m_dollars = dollars;
+	}
+
+	// Allow us to convert Dollars into Cents
+	operator Cents() { return Cents(m_dollars * 100); }
+};
+
+class Fraction
+{
+private:
+	int m_numerator;
+	int m_denominator;
+
+public:
+	// Default constructor
+	Fraction(int numerator = 0, int denominator = 1) :
+		m_numerator(numerator), m_denominator(denominator)
+	{
+		assert(denominator != 0);
+	}
+
+	// Copy constructor
+	Fraction(const Fraction &copy) :
+		m_numerator(copy.m_numerator), m_denominator(copy.m_denominator)
+	{
+		// no need to check for a denominator of 0 here since copy must already be a valid Fraction
+		std::cout << "Copy constructor called\n"; // just to prove it works
+	}
+
+	friend std::ostream& operator<<(std::ostream& out, const Fraction &f1);
+};
+
+std::ostream& operator<<(std::ostream& out, const Fraction &f1)
+{
+	out << f1.m_numerator << "/" << f1.m_denominator;
+	return out;
+}
+
+void printCents(Cents cents) {
+	cout << cents;
+}
+
 int main()
 {
 	Potato potato;
 
+	Dollars dollars(9);
+	Cents cents;
 	Cents nickle(5);
 	Cents dime(10);
-	int c2;
-	
-	cout << "Enter a value: ";
-	cin >> c2;
 
-	Cents centSum = nickle + c2;
+	printCents(dollars);
 
+	Fraction fiveThirds(Fraction(5, 3));
+	std::cout << fiveThirds;
 
-	if (nickle > dime)
-		cout << "a nickle is greater than a dime.\n";
-	if (nickle >= dime)
-		cout << "a nickle is greater than or equal to a dime.\n";
-	if (nickle < dime)
-		cout << "a dime is greater than a nickle.\n";
-	if (nickle <= dime)
-		cout << "a dime is greater than or equal to a nickle.\n";
-
-	Matrix matrix;
-	matrix(1, 2) = 4.5;
-	cout << matrix(1, 2) << '\n';
-	matrix();
-	cout << matrix(1, 2);
 	return 0;
-
-
-	/*
-	bool createPotato = true;
-
-	while (createPotato) {
-
-	char temp;
-	do {
-	cout << "Would you like to create a potato? [y/n]";
-	cin >> temp;
-	} while (temp != 'y' && temp != 'Y' && temp != 'n' && temp != 'N');
-
-	if (temp == 'y' || temp == 'Y')
-	newPotato(myArray);
-	else
-	createPotato = false;
-	}
-
-	for (const auto &element : myArray) {
-	showVector(myArray);
-	}
-	*/
-
 }
 
 
