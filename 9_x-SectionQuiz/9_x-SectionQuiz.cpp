@@ -13,6 +13,8 @@
 //	2b) Write a class named FixedPoint2 that implements the recommended solution from the previous question.
 //	Provide the overloaded operators and constructors required for the following program to run :
 
+//	2c) Overload operators >>, - (unary), + (binary) and the cast to double.
+
 class FixedPoint2 {
 private:
 	//signed long int m_nonFractional;
@@ -29,6 +31,15 @@ public:
 	}
 
 	friend std::ostream& operator<< (std::ostream &out, const FixedPoint2 &x);
+
+	//	Overload >>
+	friend std::istream& operator>> (std::istream &in, FixedPoint2 &x);
+	//	Overload unary -
+	friend FixedPoint2 operator- (const FixedPoint2 x);
+	//	Overload binary +
+	friend FixedPoint2& operator+ (const FixedPoint2 fp1, const FixedPoint2 fp2);
+	//	Overload double typecast
+	operator double() { return m_nonFractional; }
 };
 
 std::ostream& operator<<(std::ostream &out, const FixedPoint2 &x)
@@ -42,6 +53,19 @@ std::ostream& operator<<(std::ostream &out, const FixedPoint2 &x)
 	return out;
 }
 
+std::istream & operator >> (std::istream &in, FixedPoint2 & x)
+{
+	double temp = 0.0;
+	in >> temp;
+	x.m_nonFractional = static_cast<std::int16_t>(temp);
+	x.m_Fractional = static_cast<std::int8_t>(round((temp - x.m_nonFractional) * 100));
+	return in;
+}
+
+FixedPoint2  operator-(const FixedPoint2 x)
+{
+	//return x.m_nonFractional;
+}
 int main()
 {
 	FixedPoint2 a(34, 56);
@@ -52,6 +76,11 @@ int main()
 
 	FixedPoint2 c(5.01); // stored as 5.0099999... so we'll need to round this
 	std::cout << c << '\n';
+
+	std::cout << "Enter a number: "; // enter 5.678
+	std::cin >> b;
+
+	std::cout << "You entered: " << b << '\n';
 
 	return 0;
 }
