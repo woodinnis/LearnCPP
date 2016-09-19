@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-
+/*
 //	4) Extra credit: This one is a little more tricky. A floating point number is a number with a decimal where the number of digits after the decimal can be variable.
 //	A fixed point number is a number with a fractional component where the number of digits in the fractional portion is fixed.
 
@@ -88,7 +88,7 @@ void testAddition()
 
 int main()
 {
-
+	/*
 	testAddition();
 
 	FixedPoint2 a(34, 56);
@@ -100,7 +100,8 @@ int main()
 	std::cin >> a;
 
 	std::cout << "You entered: " << a << '\n';
-
+	
 	return 0;
 }
 
+*/
