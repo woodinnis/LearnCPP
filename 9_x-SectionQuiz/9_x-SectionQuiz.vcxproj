@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="9_x-SectionQuiz-Q2.cpp" />
+    <ClCompile Include="9_x-SectionQuiz-Q3.cpp" />
     <ClCompile Include="9_x-SectionQuiz-Q4.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

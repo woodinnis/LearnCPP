@@ -35,5 +35,8 @@
     <ClCompile Include="9_x-SectionQuiz-Q2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="9_x-SectionQuiz-Q3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

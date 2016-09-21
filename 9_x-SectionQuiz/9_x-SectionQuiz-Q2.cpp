@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 
-//	2) Write a class named Average that will keep track of the average of all integers passed to it.Use two members:
+/*	2) Write a class named Average that will keep track of the average of all integers passed to it.Use two members:
 //	The first one should be type int32_t, and used to keep track of the sum of all the numbers you’ve seen so far.
 //	The second should be of type int8_t, and used to keep track of how many numbers you’ve seen so far.You can divide them to find your average.
 
@@ -69,3 +69,4 @@ int main()
 
 	return 0;
 }
+*/
