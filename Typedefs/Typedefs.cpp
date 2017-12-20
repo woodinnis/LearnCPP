@@ -13,7 +13,7 @@ using pi_t = double;
 using error_t = int;
 
 error_t printData() {
-
+	return 0;
 }
 
 int main()

@@ -21,7 +21,7 @@ int main()
 
 	incrementAndPrint();
 	incrementAndPrint();
-	incrementAndPrint(6);
+	incrementAndPrint();
 
     return 0;
 }
